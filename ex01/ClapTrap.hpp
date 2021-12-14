@@ -6,7 +6,7 @@
 /*   By: vgallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:01:18 by vgallois          #+#    #+#             */
-/*   Updated: 2021/12/14 18:42:36 by vgallois         ###   ########.fr       */
+/*   Updated: 2021/12/14 18:48:36 by vgallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	Name;
 		int			Hitpoints;
 		int			Energypoints;

@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vgallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:19:25 by vgallois          #+#    #+#             */
-/*   Updated: 2021/12/14 18:45:57 by vgallois         ###   ########.fr       */
+/*   Created: 2021/12/14 18:27:32 by vgallois          #+#    #+#             */
+/*   Updated: 2021/12/14 19:08:42 by vgallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_H
+#define SCAVTRAP_H
 #include "ClapTrap.hpp"
-#include <iostream>
 
-int	main()
+class ScavTrap: public ClapTrap
 {
-	ClapTrap a("Clappy");
-	ClapTrap b = a;
-	a.attack("Olxinos");
-	a.takeDamage(9);
-	a.beRepaired(10);
-	a.takeDamage(25);
-	return (0);
-}
+	public:
+		ScavTrap();
+		ScavTrap(const std::string &name);
+		ScavTrap(const ScavTrap &name);
+		~ScavTrap();
+
+		ScavTrap &operator=(const ScavTrap &name);
+
+		void	attack(const std::string &name);
+		void	guardGate();
+};
+#endif
